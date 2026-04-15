@@ -2,9 +2,7 @@ package es.iesmz.tests;
 
 import model.Cuenta;
 import org.junit.jupiter.api.*;
-
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CuentaTest {
@@ -50,7 +48,7 @@ public class CuentaTest {
     }
 
     @Test
-    @DisplayName("Método que prueba la generación un IBAN correcto.")
+    @DisplayName("Método que prueba la generación de un IBAN correcto.")
     public void generaIBANCorrecto() {
         List<String[]> entradas = List.of(
                 new String[]{"0030", "2053", "09", "1234567895"},
@@ -82,9 +80,8 @@ public class CuentaTest {
     }
 
     @Test
-    @DisplayName("Método que prueba la generación un IBAN incorrecto.")
+    @DisplayName("Método que prueba la generación de un IBAN incorrecto.")
     public void generaIBANIncorrecto() {
-        // TODO: El primero de todos no devuelve nulo!!
         List<String[]> entradas = List.of(
                 new String[]{"2085", "2066", "62", "3456AE9011"},
                 new String[]{"208", "2066", "62", "3456789011"},
